@@ -1,0 +1,26 @@
+{
+  "name": "eventbooker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ket2310/EventBooker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ket2310/EventBooker/issues"
+  },
+  "homepage": "https://github.com/ket2310/EventBooker#readme",
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "sequelize": "^6.6.5"
+  }
+}
