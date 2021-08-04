@@ -12,5 +12,4 @@ Blog.belongsTo(Poster, {
 })
 
 
-
 module.exports = { Event, User}
