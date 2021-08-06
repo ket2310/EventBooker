@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { events } = require('../../events');
+const { events } = require('./events');
 
 // GET all users
 router.get('/', async (req, res) => {
