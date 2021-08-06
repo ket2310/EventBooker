@@ -7,8 +7,8 @@ User.hasMany(Event, {
     onDelete: 'CASCADE'
 });
 
-Blog.belongsTo(Poster, {
-    foreignKey: 'event_id'
+Event.belongsTo(User, {
+    foreignKey: 'user_id'
 })
 
 
