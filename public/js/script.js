@@ -40,9 +40,9 @@ var getEvents = function () {
             console.log(eventOnedescription)
             eventOneEl.textContent = eventOnedescription
 
-            var eventOnedescription = data.events[0].description
-            console.log(eventOnedescription)
-            eventOneEl.textContent = eventOnedescription
+            var eventOnedate = data.events[0].date
+            console.log(eventOnedate)
+            eventOneEl.textContent = eventOnedate
 
             var eventOnedescription = data.events[0].description
             console.log(eventOnedescription)
