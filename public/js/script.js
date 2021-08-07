@@ -2,6 +2,9 @@ console.log("Hello World")
 const corsApiUrl = 'https://cors-anywhere.herokuapp.com/'
 var eventsContainerEl = document.querySelector("#events-container");
 var EventNameEl = document.querySelector('#event-name');
+var EventDescriptionEl = document.querySelector('#event-description');
+var EventDateEl = document.querySelector('#event-date');
+var EventTimeEl = document.querySelector('#event-time');
 var submitBtnEl = document.querySelector('#submitBtn');
 var zipInputEl = document.querySelector('#zipInput');
 
@@ -36,6 +39,16 @@ var getEvents = function () {
             var eventOnedescription = data.events[0].description
             console.log(eventOnedescription)
             eventOneEl.textContent = eventOnedescription
+
+            var eventOnedescription = data.events[0].description
+            console.log(eventOnedescription)
+            eventOneEl.textContent = eventOnedescription
+
+            var eventOnedescription = data.events[0].description
+            console.log(eventOnedescription)
+            eventOneEl.textContent = eventOnedescription
+
+
 
 
         });
