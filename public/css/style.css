@@ -1,0 +1,36 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courgette', cursive;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #0a0a0a;
+    background: #fefefe;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80');
+    }
+.header {
+    color: blanchedalmond;
+    text-shadow: 2px 2px 4px white;
+    font-family: 'Courgette', cursive;
+    font-size: 70px;
+    }
+.subheader {
+    color: blanchedalmond;
+    font-size: 30px;
+    }  
+.leadOne {
+    color: blanchedalmond; 
+    font-size: 40px;
+}      
+
+.callout {
+    background-color: lightgrey;
+}
+
+.lead {
+    color: rgb(42, 19, 173);
+    font-size: 30px;
+    text-align: center;
+}
