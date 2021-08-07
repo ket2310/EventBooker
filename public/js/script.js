@@ -36,51 +36,51 @@ var getEvents = function () {
             console.log(eventOneName)
             eventOneEl.textContent = eventOneName
 
-            var eventOnedescription = data.events[0].description
-            console.log(eventOnedescription)
-            eventOneEl.textContent = eventOnedescription
+            var eventOneDescription = data.events[0].description
+            console.log(eventOneDescription)
+            eventOneEl.textContent = eventOneDescription
 
-            var eventOnedate = data.events[0].date
-            console.log(eventOnedate)
-            eventOneEl.textContent = eventOnedate
+            var eventOneDate = data.events[0].date
+            console.log(eventOneDate)
+            eventOneEl.textContent = eventOneDate
 
-            var eventOnetime = data.events[0].time
-            console.log(eventOnetime)
-            eventOneEl.textContent = eventOnetime
+            var eventOneTime = data.events[0].time
+            console.log(eventOneTime)
+            eventOneEl.textContent = eventOneTime
 
             
             // var eventTwoName = data.events[1].name
             // console.log(eventTwoName)
             // eventTwoEl.textContent = eventTwoName
 
-            // var eventTwodescription = data.events[1].description
-            // console.log(eventTwodescription)
-            // eventTwoEl.textContent = eventTwodescription
+            // var eventTwoDescription = data.events[1].description
+            // console.log(eventTwoDescription)
+            // eventTwoEl.textContent = eventTwoDescription
 
-            // var eventTwodate = data.events[1].date
-            // console.log(eventTwodate)
-            // eventTwoEl.textContent = eventTwodate
+            // var eventTwoDate = data.events[1].date
+            // console.log(eventTwoDate)
+            // eventTwoEl.textContent = eventTwoDate
 
-            // var eventTwotime = data.events[1].time
-            // console.log(eventTwotime)
-            // eventTwoEl.textContent = eventTwotime
+            // var eventTwoTime = data.events[1].time
+            // console.log(eventTwoTime)
+            // eventTwoEl.textContent = eventTwoTime
 
 
-            var eventThreeName = data.events[2].name
-            console.log(eventThreeName)
-            eventThreeEl.textContent = eventThreeName
+            // var eventThreeName = data.events[2].name
+            // console.log(eventThreeName)
+            // eventThreeEl.textContent = eventThreeName
 
-            var eventThreedescription = data.events[2].description
-            console.log(eventThreedescription)
-            eventThreeEl.textContent = eventThreedescription
+            // var eventThreeDescription = data.events[2].description
+            // console.log(eventThreeDescription)
+            // eventThreeEl.textContent = eventThreeDescription
 
-            var eventThreedate = data.events[2].date
-            console.log(eventThreedate)
-            eventThreeEl.textContent = eventThreedate
+            // var eventThreeDate = data.events[2].date
+            // console.log(eventThreeDate)
+            // eventThreeEl.textContent = eventThreeDate
 
-            var eventThreetime = data.events[2].time
-            console.log(eventThreetime)
-            eventThreeEl.textContent = eventThreetime
+            // var eventThreeTime = data.events[2].time
+            // console.log(eventThreeTime)
+            // eventThreeEl.textContent = eventThreeTime
 
 
 
