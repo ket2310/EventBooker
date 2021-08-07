@@ -48,6 +48,24 @@ var getEvents = function () {
             console.log(eventOnetime)
             eventOneEl.textContent = eventOnetime
 
+            
+            var eventTwoName = data.events[1].name
+            console.log(eventTwoName)
+            eventTwoEl.textContent = eventTwoName
+
+            var eventTwodescription = data.events[1].description
+            console.log(eventTwodescription)
+            eventTwoEl.textContent = eventTwodescription
+
+            var eventTwodate = data.events[1].date
+            console.log(eventTwOdate)
+            eventTwoEl.textContent = eventTwodate
+
+            var eventTwotime = data.events[1].time
+            console.log(eventTwotime)
+            eventTwoEl.textContent = eventTwotime
+
+
 
 
 
