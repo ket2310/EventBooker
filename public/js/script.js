@@ -49,21 +49,38 @@ var getEvents = function () {
             eventOneEl.textContent = eventOnetime
 
             
-            var eventTwoName = data.events[1].name
-            console.log(eventTwoName)
-            eventTwoEl.textContent = eventTwoName
+            // var eventTwoName = data.events[1].name
+            // console.log(eventTwoName)
+            // eventTwoEl.textContent = eventTwoName
 
-            var eventTwodescription = data.events[1].description
-            console.log(eventTwodescription)
-            eventTwoEl.textContent = eventTwodescription
+            // var eventTwodescription = data.events[1].description
+            // console.log(eventTwodescription)
+            // eventTwoEl.textContent = eventTwodescription
 
-            var eventTwodate = data.events[1].date
-            console.log(eventTwOdate)
-            eventTwoEl.textContent = eventTwodate
+            // var eventTwodate = data.events[1].date
+            // console.log(eventTwodate)
+            // eventTwoEl.textContent = eventTwodate
 
-            var eventTwotime = data.events[1].time
-            console.log(eventTwotime)
-            eventTwoEl.textContent = eventTwotime
+            // var eventTwotime = data.events[1].time
+            // console.log(eventTwotime)
+            // eventTwoEl.textContent = eventTwotime
+
+
+            var eventThreeName = data.events[2].name
+            console.log(eventThreeName)
+            eventThreeEl.textContent = eventThreeName
+
+            var eventThreedescription = data.events[2].description
+            console.log(eventThreedescription)
+            eventThreeEl.textContent = eventThreedescription
+
+            var eventThreedate = data.events[2].date
+            console.log(eventThreedate)
+            eventThreeEl.textContent = eventThreedate
+
+            var eventThreetime = data.events[2].time
+            console.log(eventThreetime)
+            eventThreeEl.textContent = eventThreetime
 
 
 
