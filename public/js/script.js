@@ -9,10 +9,19 @@ var submitBtnEl = document.querySelector('#submitBtn');
 var zipInputEl = document.querySelector('#zipInput');
 
 var eventOneEl = document.querySelector('#eventOne');
+var descOneEl = document.querySelector('#descOne');
+var dateOneEl = document.querySelector('#dateOne');
+var timeOneEl = document.querySelector('#timeOne');
 
 var eventTwoEl = document.querySelector('#eventTwo');
+var descTwoEl = document.querySelector('#descTwo');
+var dateTwoEl = document.querySelector('#dateTwo');
+var timeTwoEl = document.querySelector('#timeTwo');
 
 var eventThreeEl = document.querySelector('#eventThree');
+var descThreeEl = document.querySelector('#descThree');
+var dateThreeEl = document.querySelector('#dateThree');
+var timeThreeEl = document.querySelector('#timeThree');
 
 
 // This layer will call the events
@@ -49,38 +58,38 @@ var getEvents = function () {
             eventOneEl.textContent = eventOneTime
 
             
-            // var eventTwoName = data.events[1].name
-            // console.log(eventTwoName)
-            // eventTwoEl.textContent = eventTwoName
+            var eventTwoName = data.events[1].name
+            console.log(eventTwoName)
+            eventTwoEl.textContent = eventTwoName
 
-            // var eventTwoDescription = data.events[1].description
-            // console.log(eventTwoDescription)
-            // eventTwoEl.textContent = eventTwoDescription
+            var eventTwoDescription = data.events[1].description
+            console.log(eventTwoDescription)
+            eventTwoEl.textContent = eventTwoDescription
 
-            // var eventTwoDate = data.events[1].date
-            // console.log(eventTwoDate)
-            // eventTwoEl.textContent = eventTwoDate
+            var eventTwoDate = data.events[1].date
+            console.log(eventTwoDate)
+            eventTwoEl.textContent = eventTwoDate
 
-            // var eventTwoTime = data.events[1].time
-            // console.log(eventTwoTime)
-            // eventTwoEl.textContent = eventTwoTime
+            var eventTwoTime = data.events[1].time
+            console.log(eventTwoTime)
+            eventTwoEl.textContent = eventTwoTime
 
 
-            // var eventThreeName = data.events[2].name
-            // console.log(eventThreeName)
-            // eventThreeEl.textContent = eventThreeName
+            var eventThreeName = data.events[2].name
+            console.log(eventThreeName)
+            eventThreeEl.textContent = eventThreeName
 
-            // var eventThreeDescription = data.events[2].description
-            // console.log(eventThreeDescription)
-            // eventThreeEl.textContent = eventThreeDescription
+            var eventThreeDescription = data.events[2].description
+            console.log(eventThreeDescription)
+            eventThreeEl.textContent = eventThreeDescription
 
-            // var eventThreeDate = data.events[2].date
-            // console.log(eventThreeDate)
-            // eventThreeEl.textContent = eventThreeDate
+            var eventThreeDate = data.events[2].date
+            console.log(eventThreeDate)
+            eventThreeEl.textContent = eventThreeDate
 
-            // var eventThreeTime = data.events[2].time
-            // console.log(eventThreeTime)
-            // eventThreeEl.textContent = eventThreeTime
+            var eventThreeTime = data.events[2].time
+            console.log(eventThreeTime)
+            eventThreeEl.textContent = eventThreeTime
 
 
 
