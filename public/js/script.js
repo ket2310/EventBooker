@@ -49,7 +49,7 @@ var getEvents = function () {
             console.log(eventOneDescription)
             eventOneEl.textContent = eventOneDescription
 
-            var eventOneDate = data.events[0].date
+            var eventOneDate = data.events[0].time_start
             console.log(eventOneDate)
             eventOneEl.textContent = eventOneDate
 
