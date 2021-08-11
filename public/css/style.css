@@ -8,7 +8,7 @@ body {
     background: #fefefe;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: url('https://mcdn.wallpapersafari.com/medium/39/15/Q4Iocv.jpg');
+    background-image: url('https://motionarray.imgix.net/preview-141434-i5sPKIdZtE-high_0014.jpg?w=660&q=60&fit=max&auto=format');
     background-size: cover;
     background-repeat: no-repeat;
     }
@@ -16,12 +16,17 @@ body {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 70px;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px rgb(42, 73, 104);
+    padding: 60px;
     }
+    
 .subheader {
     font-size: 30px;
     color: black;
     }  
 .leadOne {
     font-size: 40px;
-}      
-
+    text-align: center;
+    padding: 40px;
+}   
