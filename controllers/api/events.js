@@ -31,11 +31,14 @@ router.get("/:id", async (req, res) => {
 });
 
 // Create an event
-router.post("/", async (req, res) => {
+router.post("/addevent", async (req, res) => {
   try {
+    console.log(req.body)
+    console.log("Bad request on line 37")
     const newEvent = await Event.create({
       ...req.body,
-      user_id: req.session.user_id,
+      name: req.body.name,
+      description: req.body.desc,
     });
     res.status(200).json(newEvent);
   } catch (err) {
