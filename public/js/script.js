@@ -56,7 +56,7 @@ var getEvents = function () {
 
 }
 
-var bookThisEvent= function() {
+var bookThisEvent= function(whichEvent) {
 
 }
 submitBtnEl.addEventListener('click', function (event) {
@@ -68,5 +68,5 @@ submitBtnEl.addEventListener('click', function (event) {
 bookOneEl.addEventListener('click', function (event) {
     event.preventDefault();
     console.log(event.target.id)
-    bookThisEvent();
+    bookThisEvent(event.target.id);
 })
