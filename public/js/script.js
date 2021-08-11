@@ -19,6 +19,9 @@ var eventThreeEl = document.querySelector('#eventThree');
 var descThreeEl = document.querySelector('#descThree');
 var costThreeEl = document.querySelector('#costThree');
 var bookThreeEl = document.querySelector('#bookBtn3');
+var events1;
+var events2;
+var events3;
 
 // This layer will call the events
 var getEvents = function () {
@@ -41,23 +44,52 @@ var getEvents = function () {
             descOneEl.textContent = data.events[0].description
             costOneEl.textContent = (data.events[0].cost == null ? "" : "$" + data.events[0].cost)
             bookOneEl.setAttribute('style', 'visibility: visible');
+            events1 = data.events[0];
 
             eventTwoEl.textContent = data.events[1].name
             descTwoEl.textContent = data.events[1].description
             costTwoEl.textContent = (data.events[1].cost == null ? "" : "$" + data.events[1].cost)
             bookTwoEl.setAttribute('style', 'visibility: visible');
+            events2 = data.events[1];
 
             eventThreeEl.textContent = data.events[2].name
             descThreeEl.textContent = data.events[2].description
             costThreeEl.textContent = (data.events[2].cost == null ? "" : "$" + data.events[2].cost)
             bookThreeEl.setAttribute('style', 'visibility: visible');
+            events3 = data.events[2];
 
+            console.log(events1.name)
         });
 
 }
 
-var bookThisEvent= function(whichEvent) {
+var bookThisEvent =async function (whichEvent) {
+    switch (whichEvent) {
+        case "bookBtn1":
+            const name = events1.name;
+            const desc = events1.description;
+            const response = await fetch('/api/events/addevent', {
+                method: 'POST',
+                body: JSON.stringify({ name, desc }),
+                headers: { 'Content-Type': 'application/json' },
+              });
+          
+              if (response.ok) {
+                document.location.replace('/dashboard');
+              } else {
+                alert(response.statusText + " Error") ;
+              }
+            break;
 
+        case "bookBtn2":
+
+            break;
+        case "bookBtn3":
+
+            break;
+
+
+    }
 }
 submitBtnEl.addEventListener('click', function (event) {
     event.preventDefault()
