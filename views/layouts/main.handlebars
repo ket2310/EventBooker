@@ -11,10 +11,15 @@
 <body>
   <!-- Navigation -->
   <div class="top-bar-right">
-    <ul class="menu">
-      <li><a href="#">My Account</a></li>
-      <li><a class="button">Login</a></li>
-    </ul>
+    <nav>            
+      <!-- Conditionally render login or logout links -->
+      {{#if logged_in}}
+      <a href="/profile">Profile</a> |
+      <button class="no-button" id="logout">logout</button>
+      {{else}}
+      <a class="button" href="/login">Login</a>
+      {{/if}}
+    </nav>
   </div>
 
   <div class="flex-column justify-space-around">
@@ -55,6 +60,7 @@
         <p class="lead" id="eventOne">Event One</p>
         <p class="lead" id="descOne"></p>
         <p class="lead" id="costOne"></p>
+        <button type="submit" class="button" style="visibility: hidden;" id="bookBtn1">Book Now!</button>
       </div>
     </div>
     <div class="column">
@@ -64,6 +70,7 @@
         <p class="lead" id="eventTwo">Event Two</p>
         <p class="lead" id="descTwo"></p>
         <p class="lead" id="costTwo"></p>
+        <button type="submit" class="button" style="visibility: hidden;" id="bookBtn2">Book Now!</button>
       </div>
     </div>
     <div class="column">
@@ -73,6 +80,7 @@
         <p class="lead" id="eventThree">Event Three</p>
         <p class="lead" id="descThree"></p>
         <p class="lead" id="costThree"></p>
+        <button type="submit" class="button" style="visibility: hidden;" id="bookBtn3">Book Now!</button>
       </div>
     </div>
   </div>
