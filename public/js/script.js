@@ -40,17 +40,23 @@ var getEvents = function () {
             eventOneEl.textContent = data.events[0].name
             descOneEl.textContent = data.events[0].description
             costOneEl.textContent = (data.events[0].cost == null ? "" : "$" + data.events[0].cost)
-            bookOneEl.attributes()
+            bookOneEl.setAttribute('style', 'visibility: visible');
 
             eventTwoEl.textContent = data.events[1].name
             descTwoEl.textContent = data.events[1].description
             costTwoEl.textContent = (data.events[1].cost == null ? "" : "$" + data.events[1].cost)
+            bookTwoEl.setAttribute('style', 'visibility: visible');
 
             eventThreeEl.textContent = data.events[2].name
             descThreeEl.textContent = data.events[2].description
             costThreeEl.textContent = (data.events[2].cost == null ? "" : "$" + data.events[2].cost)
+            bookThreeEl.setAttribute('style', 'visibility: visible');
 
         });
+
+}
+
+var bookThisEvent= function() {
 
 }
 submitBtnEl.addEventListener('click', function (event) {
@@ -58,3 +64,9 @@ submitBtnEl.addEventListener('click', function (event) {
     console.log("hello")
     getEvents()
 });
+
+bookOneEl.addEventListener('click', function (event) {
+    event.preventDefault();
+    console.log(event.target.id)
+    bookThisEvent();
+})
