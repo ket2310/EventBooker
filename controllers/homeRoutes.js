@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Event, User} = require('../models');
 const withAuth = require('../utils/auth');
+const path = require('path')
 
 router.get('/', async (req, res) => {
   try {
@@ -50,28 +51,27 @@ router.get('/event/:id',  withAuth, async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
-router.get('/dashboard', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const posterData = await Poster.findByPk(req.session.poster_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: event }],
-    });
+// // Use withAuth middleware to prevent access to route
+// router.get('/dashboard', withAuth, async (req, res) => {
+//   try {
+//     // Find the logged in user based on the session ID
+//     const posterData = await Poster.findByPk(req.session.poster_id, {
+//       attributes: { exclude: ['password'] },
+//       include: [{ model: event }],
+//     });
 
-    const poster = posterData.get({ plain: true });
+//     const poster = posterData.get({ plain: true });
 
-    res.render('dashboard', {
-      ...poster,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('dashboard', {
+//       ...poster,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/profile');
     return;
@@ -79,10 +79,6 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
-
-router.get('/signup' , (req, res) =>{ 
-    res.render('signup')
-})
 
 
 
