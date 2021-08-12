@@ -42,7 +42,7 @@ router.post("/addevent", async (req, res) => {
       time_start: req.body.date,  
     });
     res.status(200).json(newEvent);
-    res.render('main')
+
   } catch (err) {
     res.status(400).json(err);
   }
