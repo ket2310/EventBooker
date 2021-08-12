@@ -3,7 +3,7 @@ const User  = require('./User');
 
 // ASSOCIATIONS:
 User.hasMany(Event, {
-    foreignKey: 'event_id',
+    foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
 

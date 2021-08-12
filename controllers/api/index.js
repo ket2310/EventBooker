@@ -3,7 +3,7 @@ const user = require('./user');
 const events = require('./events');
 
 
-router.use('/user', user);
+router.use('/users', user);
 router.use('/events', events);
 
 
