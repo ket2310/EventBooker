@@ -27,10 +27,7 @@ Event.init(
             allowNull: false
         },
         
-        time: {
-            type: DataTypes.TIME,
-            allowNull: false,
-        },   
+      
     },
 
 
