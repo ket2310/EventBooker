@@ -76,7 +76,7 @@ var bookThisEvent =async function (whichEvent) {
               });
           
               if (response.ok) {
-                document.location.replace('/main');
+                document.location.replace('/profile');
               } else {
                 alert(response.statusText + " Error") ;
               }
