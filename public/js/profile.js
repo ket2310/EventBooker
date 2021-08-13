@@ -38,6 +38,13 @@ const newFormHandler = async (event) => {
     }
   };
   
+  
+const zipsearch = async () => {
+  document.location.replace('/zipsearch')
+}
+
+  document.querySelector('#gosearch').addEventListener('click', zipsearch);
+
   document
     .querySelector('.new-event-form')
     .addEventListener('submit', newFormHandler);
