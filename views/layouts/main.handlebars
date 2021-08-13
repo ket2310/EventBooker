@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <main class="container container-fluid mt-5">
@@ -36,92 +37,26 @@
   <div class="row column">
     <hr>
   </div>
-
-
   <div class="row column">
     <p class="leadOne">Search Events Around You</p>
-
-
     <div class="medium-5 large-3 columns">
     </div>
-    <div class="callout secondary">
-      <form>
-        <div class="row">
-          <div class="small-12 columns">
-            <label>Search by Zip Code
-              <input type="text" id="zipInput" placeholder="Zip Code Here">
-            </label>
-          </div>
+   
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
 
-          <button type="submit" class="button" id="submitBtn">Search Now!</button>
-        </div>
-    </div>
-    </form>
-  </div>
 
-  <div class="row small-up-1 medium-up-2 large-up-3">
-    <div class="column">
-      <div class="callout">
-        {{!-- <p><img src="https://placehold.it/400x370&text=Pegasi B" alt="image of event one" id="firstImg"></p> --}}
-        <p class="lead" id="eventOne">Event One</p>
-        <p class="lead" id="descOne"></p>
-        <p class="lead" id="dateOne"></p>
-        <button type="submit" class="button" style="visibility: hidden;" id="bookBtn1">Book Now!</button>
-      </div>
-    </div>
-    <div class="column">
-      <div class="callout">
-        {{!-- <p><img src="https://placehold.it/400x370&text=Pegasi B" alt="image of event Two" id="firstImg"></p>
-        --}}
-        <p class="lead" id="eventTwo">Event Two</p>
-        <p class="lead" id="descTwo"></p>
-        <p class="lead" id="dateTwo"></p>
-        <button type="submit" class="button" style="visibility: hidden;" id="bookBtn2">Book Now!</button>
-      </div>
-    </div>
-    <div class="column">
-      <div class="callout">
-        {{!-- <p><img src="https://placehold.it/400x370&text=Pegasi B" alt="image of event Three" id="firstImg"></p>
-        --}}
-        <p class="lead" id="eventThree">Event Three</p>
-        <p class="lead" id="descThree"></p>
-        <p class="lead" id="dateThree"></p>
-        <button type="submit" class="button" style="visibility: hidden;" id="bookBtn3">Book Now!</button>
-      </div>
-    </div>
-  </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
 
-  </div>
-
-  <footer>
-
-    <div class="row">
-
-      <div class="medium-6 columns">
-        <ul class="menu">
-          <li><a href="#">Legal</a></li>
-          <li><a href="#">Partner</a></li>
-          <li><a href="#">Explore</a></li>
-        </ul>
-      </div>
-
-      <div class="medium-6 columns">
-        <ul class="menu float-right">
-          <li class="menu-text">Copyright</li>
-        </ul>
-
-      </div>
-    </div>
-
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
-  <script src="./js/script.js"></script>
 </body>
 
 
 </html>
+
+
