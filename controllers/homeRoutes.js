@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Event, User} = require('../models');
 const withAuth = require('../utils/auth');
+const path = require('path')
 
 router.get('/', withAuth, async (req, res) => {
   try {
@@ -29,6 +30,7 @@ router.get('/findevents', withAuth, async (req, res) => {
   }
 });
 
+
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -51,9 +53,6 @@ router.get('/profile', withAuth, async (req, res) => {
       const events = eventData.map((event) =>
       event.get({ plain: true })
     );
-
-
-  
     res.render('profile', {
       events,
       logged_in: true
@@ -70,7 +69,6 @@ router.get('/profile', withAuth, async (req, res) => {
 
 
 
-
 router.get('/event/:id',  withAuth, async (req, res) => {
   try {
     console.log('')
@@ -82,7 +80,6 @@ router.get('/event/:id',  withAuth, async (req, res) => {
         },
       ],
     });
-
     const event = eventData.get({ plain: true });
     console.log(event)
     res.render('events', {
