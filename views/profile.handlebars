@@ -1,7 +1,7 @@
 
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{username}}!</h2>
   </div>
 </div>
 
@@ -16,7 +16,7 @@
       </div>
       <div class="form-group">
         <label for="event-time">Event Time:</label>
-        <input class="form-input" type="time" id="event-time" name="event-time" />
+        <input class="form-input" type="date" id="event-time" name="event-time" />
       </div>
       <div class="form-group">
         <label for="event-desc">description:</label>
@@ -28,7 +28,7 @@
     </form>
   </div>
 
-  {{#if events.length}}
+  
   <div class="col-md-6 event-list">
     <h3>Current events:</h3>
 
@@ -43,7 +43,12 @@
     </div>
     {{/each}}
   </div>
-  {{/if}}
+      <div >
+      <p class="leadOne">Search Events Around You</p>
+  
+      <button id="goSearch" type="button" class="btn btn-primary">Search by zipcode</button>
+    </div>
+
 </div>
 
 <script src="./js/profile.js"></script>

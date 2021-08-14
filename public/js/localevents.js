@@ -1,10 +1,3 @@
-console.log("Hello World")
-const corsApiUrl = 'https://cors-anywhere.herokuapp.com/'
-var eventsContainerEl = document.querySelector("#events-container");
-var EventNameEl = document.querySelector('#event-name');
-var submitBtnEl = document.querySelector('#submitBtn');
-var zipInputEl = document.querySelector('#zipInput');
-
 var eventOneEl = document.querySelector('#eventOne');
 var descOneEl = document.querySelector('#descOne');
 var dateOneEl = document.querySelector('#dateOne');
@@ -23,10 +16,9 @@ var events1;
 var events2;
 var events3;
 
-// This layer will call the events
-var getEvents = function () {
-    var events = "san-francisco-yelp-10-year-anniversary-celebration ";
-    var zipCode = zipInputEl.value;
+var getEvents = function () {  
+  
+      var zipCode = zipInputEl.value;
     fetch(corsApiUrl + 'https://api.yelp.com/v3/events?location=' + zipCode, {
         method: 'GET',
         headers: new Headers({
@@ -67,11 +59,11 @@ var bookThisEvent =async function (whichEvent) {
     switch (whichEvent) {
         case "bookBtn1":
             var name = events1.name;
-            var description = events1.description;
-            var date = events1.date;
+            var desc = events1.description;
+            var date = events1.time_start;
             var response = await fetch('/api/events/addevent', {
                 method: 'POST',
-                body: JSON.stringify({ name, description, date }),
+                body: JSON.stringify({ name, desc, date }),
                 headers: { 'Content-Type': 'application/json' },
               });
           
@@ -84,32 +76,32 @@ var bookThisEvent =async function (whichEvent) {
 
         case "bookBtn2":
             name = events2.name;
-            description = events2.description;
-            date = events2.date;
+            desc = events2.description;
+            date = events2.time_start;
             response = await fetch('/api/events/addevent', {
                 method: 'POST',
-                body: JSON.stringify({ name, description, date }),
+                body: JSON.stringify({ name, desc, date }),
                 headers: { 'Content-Type': 'application/json' },
               });
           
               if (response.ok) {
-                document.location.replace('/profile');
+                document.location.replace('/main');
               } else {
                 alert(response.statusText + " Error") ;
               }
             break;
         case "bookBtn3":
             name = events3.name;
-            description = events3.description;
-            date = events3.date;
+            desc = events3.description;
+            date = events3.time_start;
             response = await fetch('/api/events/addevent', {
                 method: 'POST',
-                body: JSON.stringify({ name, description, date }),
+                body: JSON.stringify({ name, desc, date }),
                 headers: { 'Content-Type': 'application/json' },
               });
           
               if (response.ok) {
-                document.location.replace('/profile');
+                document.location.replace('/main');
               } else {
                 alert(response.statusText + " Error") ;
               }
@@ -118,11 +110,7 @@ var bookThisEvent =async function (whichEvent) {
 
     }
 }
-submitBtnEl.addEventListener('click', function (event) {
-    event.preventDefault()
-    console.log("hello")
-    getEvents()
-});
+
 
 bookOneEl.addEventListener('click', function (event) {
     event.preventDefault();
@@ -143,3 +131,6 @@ bookThreeEl.addEventListener('click', function (event) {
     console.log(event.target.id)
     bookThisEvent(event.target.id);
 })
+
+
+getEvents;

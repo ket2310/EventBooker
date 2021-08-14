@@ -38,8 +38,8 @@ router.post("/addevent", async (req, res) => {
     const newEvent = await Event.create({
       ...req.body,
       name: req.body.name,
-      description: req.body.desc,
-      time_start: req.body.date,  
+      description: req.body.description,
+      date: req.body.eventTime,  
     });
     res.status(200).json(newEvent);
 
